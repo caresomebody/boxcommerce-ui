@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+
+# Playwright test reports
+playwright-report/
+blob-report/
+test-results/
+trace.zip
+screenshots/
+reports/
+cucumber-report/

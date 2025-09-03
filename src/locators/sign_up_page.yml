@@ -1,0 +1,67 @@
+section_signed_up_title: "//div[contains(@class,'section-title') and normalize-space()='Signed up?']"
+section_signed_up_info: "//div[@section-info-content and contains(normalize-space(),'Log into your account')]"
+section_signed_up_login_button: "//button[contains(@class,'auth-page')]/span[normalize-space()='Log in']"
+
+header_logo: "//a[@href='https://uat.boxcommerce.com']//img[@alt='Logo']"
+header_back: "//a[contains(@class,'back')]//p[normalize-space()='Back']"
+
+section_create_account_title: "//div[contains(@class,'section-title') and normalize-space()='Create account']"
+section_create_account_subtitle: "//div[contains(@class,'section-subtitle')]//strong[contains(@class,'trial-msg') and normalize-space()='free trial']"
+
+signup_with_email: "//button[contains(@class,'regular-signup')]//span[normalize-space()='Sign up with email/phone no.']"
+signup_with_facebook: "//button[contains(@class,'facebook')]//span[normalize-space()='Sign up with Facebook']"
+signup_with_google: "//button[contains(@class,'google')]//span[normalize-space()='Sign up with Google']"
+signup_with_x: "//button[contains(@class,'x')]//span[normalize-space()='Sign up with X']"
+
+signup_policies_hint: "//div[contains(@class,'policies-hint')]"
+
+## Sign Up Form
+signup_first_name_input: "//input[@formcontrolname='firstName' and contains(@class,'bc-input-element')]"
+signup_last_name_input: "//input[@formcontrolname='lastName' and contains(@class,'bc-input-element')]"
+
+signup_country_select: "//mat-select[@formcontrolname='countryCode']"
+country_option_indonesia: "//mat-option[.//span[normalize-space()='Indonesia']]"
+country_option_uk: "//mat-option[.//span[normalize-space()='United Kingdom']]"
+
+signup_phone_country_select: "//bc-tel-input[@formcontrolname='mobileNumber']//mat-select[contains(@class,'country-select')]"
+search_input: "//input[@type='search' and @placeholder='Search']"
+country_option_indonesia_phone: "//mat-option//div[contains(@class,'country-name') and normalize-space()='Indonesia']"
+signup_phone_input: "//bc-tel-input[@formcontrolname='mobileNumber']//input[@type='tel' and @placeholder='Phone number']"
+
+signup_email_input: "//input[@type='email' and @formcontrolname='email']"
+
+signup_password_input: "//input[@type='password' and @formcontrolname='password']"
+signup_password_visibility_toggle: "//bc-login-form-field[.//input[@formcontrolname='password']]//mat-icon[normalize-space()='visibility']"
+signup_password_input_hidden: "//input[@formcontrolname='password' and @placeholder='Password' and @type='password']"
+signup_password_input_visible: "//input[@formcontrolname='password' and @placeholder='Password' and @type='text']"
+
+signup_confirm_password_input: "//input[@type='password' and @formcontrolname='confirmPassword']"
+signup_confirm_password_visibility_toggle: "//bc-login-form-field[.//input[@formcontrolname='confirmPassword']]//mat-icon[normalize-space()='visibility']"
+signup_confirm_password_input_hidden: "//input[@formcontrolname='confirmPassword' and @placeholder='Confirm password' and @type='password']"
+signup_confirm_password_input_visible: "//input[@formcontrolname='confirmPassword' and @placeholder='Confirm password' and @type='text']"
+
+signup_coupon_code_input: "//input[@formcontrolname='couponCode' and @placeholder='Coupon code']"
+signup_coupon_field_disabled: "//bc-login-form-field[contains(@class,'disabled')]//input[@formcontrolname='couponCode']"
+
+signup_button_enabled: "//button[@type='submit' and contains(@class,'auth-page') and not(contains(@class,'disabled'))]/span[normalize-space()='Sign up']"
+signup_button_disabled: "//button[@type='submit' and contains(@class,'auth-page') and contains(@class,'disabled')]/span[normalize-space()='Sign up']"
+
+## Error Validation
+error_confirm_password_mismatch: "//div[contains(@class,'error-message') and normalize-space()='The confirm password does not match the password.']"
+error_password_requirements: "//div[contains(@class,'error-message') and contains(normalize-space(),'The password required at least 1 uppercase and 1 lowercase')]"
+error_invalid_email: "//div[contains(@class,'error-message') and normalize-space()='Please enter a valid email address.']"
+error_invalid_phone: "//div[contains(@class,'error-message') and normalize-space()='Invalid number, please check and re-enter.']"
+error_first_name_required: "//div[contains(@class,'error-message') and normalize-space()='The first name field is required.']"
+error_last_name_required: "//div[contains(@class,'error-message') and normalize-space()='The last name field is required.']"
+
+## Loader
+loader_message: "//div[contains(@class,'loader-copy') and contains(normalize-space(),'Make coming home a happy habit.')]"
+loader_tip: "//div[contains(@class,'loader-tip') and normalize-space()='- Your friends at BoxCommerce']"
+loader_spinner: "//div[contains(@class,'spinner-container')]//bc-progress-spinner"
+
+## Welcome to BoxCommerce Website Wizard
+wizard_intro_title: "//div[contains(@class,'title') and normalize-space()='Welcome to the BoxCommerce website wizard']"
+wizard_intro_description: "//div[contains(@class,'description') and contains(normalize-space(),'Follow these 3 simple steps')]"
+wizard_start_button: "//button[contains(@class,'bc-primary')]//span[normalize-space()='Start']"
+wizard_intro_image: "//img[@alt='Wizard image' and contains(@src,'onboarding-intro.svg')]"
+

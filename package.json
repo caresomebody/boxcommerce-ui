@@ -1,0 +1,20 @@
+{
+  "name": "boxcommerce-ui-automation",
+  "version": "1.0.0",
+  "description": "Automation for Boxcommerce Test Analyst Assigment",
+  "main": "index.js",
+  "author": "Ali Naufal Ammarullah (alinaufal00@gmail.com)",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headless": "cucumber-js --parallel 2",
+    "report": "cucumber-js --format html:reports/cucumber-report.html"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@types/node": "^20.0.0"
+  }
+}
