@@ -1,7 +1,6 @@
 module.exports = {
   default: {
     paths: ["tests/features/**/*.feature"],
-
     require: ["tests/step_definitions/**/*.js", "src/support/**/*.js"],
     format: [
       "progress",
