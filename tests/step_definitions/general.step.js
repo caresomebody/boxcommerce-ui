@@ -1,5 +1,9 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
+const {
+  generateRandomPhone,
+  generateRandomEmail,
+} = require("../../src/support/dataGenerator");
 
 Given("user navigates to {string}", async function (url) {
   await this.page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
@@ -8,6 +12,7 @@ Given("user navigates to {string}", async function (url) {
 Given("user clicks {string}", async function (element) {
   const elementLocator = this.locator.getLocator(this.page, element);
   await expect(elementLocator).toBeVisible({ timeout: 15000 });
+  await expect(elementLocator).toBeEnabled({ timeout: 15000 });
 
   const elements = await elementLocator.all();
   if (elements.length > 1) {
@@ -92,20 +97,6 @@ When(
   }
 );
 
-function generateRandomPhone() {
-  const prefix = "85";
-  const digits = Array.from({ length: 8 }, () =>
-    Math.floor(Math.random() * 10)
-  ).join("");
-  return prefix + digits;
-}
-
-function generateRandomEmail() {
-  const timestamp = Date.now();
-  const random = Math.floor(Math.random() * 1000);
-  return `user_${timestamp}_${random}@testmail.com`;
-}
-
 When("user enters {string} in {string}", async function (text, element) {
   let value = text;
 
@@ -126,8 +117,8 @@ When("user enters {string} in {string}", async function (text, element) {
   await elementLocator.fill(value);
 });
 
-When('user clears {string}', async function (element) {
+When("user clears {string}", async function (element) {
   const elementLocator = this.locator.getLocator(this.page, element);
   await expect(elementLocator).toBeVisible({ timeout: 15000 });
-  await elementLocator.fill(''); 
+  await elementLocator.fill("");
 });

@@ -23,7 +23,7 @@ signup_country_select: "//mat-select[@formcontrolname='countryCode']"
 country_option_indonesia: "//mat-option[.//span[normalize-space()='Indonesia']]"
 country_option_uk: "//mat-option[.//span[normalize-space()='United Kingdom']]"
 
-signup_phone_country_select: "//bc-tel-input[@formcontrolname='mobileNumber']//mat-select[contains(@class,'country-select')]"
+signup_phone_country_select: "//bc-tel-input[@formcontrolname='mobileNumber']//mat-select[contains(@class,'country-select')]/div/div[2]"
 search_input: "//input[@type='search' and @placeholder='Search']"
 country_option_indonesia_phone: "//mat-option//div[contains(@class,'country-name') and normalize-space()='Indonesia']"
 signup_phone_input: "//bc-tel-input[@formcontrolname='mobileNumber']//input[@type='tel' and @placeholder='Phone number']"

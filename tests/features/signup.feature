@@ -43,24 +43,10 @@ Feature: User Sign Up to Boxcommerce Merchan Account
     And user should see Sign Up form
     Then user enters "Test" in "signup_first_name_input"
     And user enters "Automation" in "signup_last_name_input"
-    And user clicks "signup_country_select"
-    And user clicks "country_option_indonesia"
-    And user clicks "signup_phone_country_select"
-    And user enters "Indonesia" in "search_input"
-    And user clicks "country_option_indonesia_phone"
-    And user enters "RANDOM_PHONE" in "signup_phone_input"
+    And user choose Indonesia location
+    And user fills phone number with Indonesia code
     And user enters "RANDOM_EMAIL" in "signup_email_input"
-    And user enters "Testing26$" in "signup_password_input"
-    And user should see "signup_password_input_hidden"
-    And user enters "Testing26$" in "signup_confirm_password_input"
-    And user should see "signup_confirm_password_input_hidden"
-    And user clicks "signup_password_visibility_toggle"
-    And user should not see "signup_password_input_hidden"
-    And user should see "signup_password_input_visible"
-    And user clicks "signup_confirm_password_visibility_toggle"
-    And user should not see "signup_confirm_password_input_hidden"
-    And user should see "signup_confirm_password_input_visible"
-    And user enters "UATQA-DEMO" in "signup_coupon_code_input"
-    And user clicks "signup_button_enabled"
+    And user fills password and confirm password with "Testing26$"
+    And user enters coupon code "UATQA-DEMO" and handles validation
     And user should see Loading page
     And user should see Welcome to Boxcommerce Website Wizard
