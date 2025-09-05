@@ -108,4 +108,4 @@ boxcommerce-ui/
 ![HTML Report](report.png "Cucumber HTML report example")
 
 ## Recording How to Run the Automation
-[Watch Setup and Execution Demo]( https://youtu.be/d2qmUaA3i2w "Step by step Install and Running the Automation")
+[Watch Setup and Execution Demo]( https://youtu.be/6qkg-SIm-X8 "Step by step Install and Running the Automation")
