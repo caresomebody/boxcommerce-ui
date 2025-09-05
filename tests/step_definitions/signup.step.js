@@ -1,6 +1,6 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
-const { generateRandomPhone,  generateRandomEmail,} = require("../../src/support/dataGenerator");
+const { generateRandomPhone} = require("../../src/support/dataGenerator");
 
 
 Then("user should see Create Account sections", async function () {
@@ -72,23 +72,6 @@ Then("user should see Loading page", async function () {
     await expect(el).toBeVisible({ timeout: 15000 });
   }
 });
-
-Then(
-  "user should see Welcome to Boxcommerce Website Wizard",
-  async function () {
-    const keys = [
-      "wizard_intro_title",
-      "wizard_intro_image",
-      "wizard_intro_description",
-      "wizard_start_button",
-    ];
-
-    for (const key of keys) {
-      const el = this.locator.getLocator(this.page, key);
-      await expect(el).toBeVisible({ timeout: 15000 });
-    }
-  }
-);
 
 Given("user choose Indonesia location", async function () {
   this.locator.getLocator(this.page, "signup_country_select").click();

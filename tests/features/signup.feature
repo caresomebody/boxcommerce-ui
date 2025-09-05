@@ -4,7 +4,8 @@ Feature: User Sign Up to Boxcommerce Merchan Account
   Background:
     Given user navigates to "https://dashboard-uat.boxcommerce.com/en-GB/auth/sign-up"
 
-  Scenario: Verify Sign Up Page
+  @Verify @TC01
+  Scenario: TC-01 - Verify Sign Up Page
     When user should see "header_logo"
     And user should see "header_back"
     And user should see Have Account sections
@@ -14,7 +15,8 @@ Feature: User Sign Up to Boxcommerce Merchan Account
     And user clicks "signup_with_email"
     Then user should see Sign Up form
 
-  Scenario: User failed to Sign Up when the input is not valid
+  @Validation @TC02
+  Scenario: TC-02 - User failed to Sign Up when the input is not valid
     When user clicks "signup_with_email"
     And user should see Sign Up form
     Then user enters "Test" in "signup_first_name_input"
@@ -38,7 +40,8 @@ Feature: User Sign Up to Boxcommerce Merchan Account
     And user should see "error_last_name_required"
     And user should see "signup_button_disabled"
 
-  Scenario: User successfully sign up to Boxcommerce
+  @Create @TC03
+  Scenario: TC-03 - User successfully sign up to Boxcommerce & Create Store
     When user clicks "signup_with_email"
     And user should see Sign Up form
     Then user enters "Test" in "signup_first_name_input"
@@ -50,3 +53,19 @@ Feature: User Sign Up to Boxcommerce Merchan Account
     And user enters coupon code "UATQA-DEMO" and handles validation
     And user should see Loading page
     And user should see Welcome to Boxcommerce Website Wizard
+    And user clicks "wizard_start_button"
+    And user should see Step 1 of Website Wizard
+    And user fills Store Name, URL, Description, and Whatsapp as empty and invalid, and check error message
+    And user uploads image "../../src/image/logo.png" to "wizard_logo_file_input"
+    And user click save in Crop Image
+    And user fills all field in Step 1
+    And user waits 2 seconds
+    And user clicks "wizard_next_step"
+    And user should see Step 2 of Website Wizard
+    And user search and select store location
+    And user waits 2 seconds
+    And user clicks "wizard_next_step"
+    And user waits 2 seconds
+    And user should see Quick Guide and continue
+    And user should see Success Built Store message and finish the Onboarding
+    And user should see "dashboard_header_title"

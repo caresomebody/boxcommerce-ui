@@ -1,9 +1,8 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
-const {
-  generateRandomPhone,
-  generateRandomEmail,
-} = require("../../src/support/dataGenerator");
+const { generateRandomPhone, generateRandomEmail,} = require("../../src/support/dataGenerator");
+const path = require('path');
+
 
 Given("user navigates to {string}", async function (url) {
   await this.page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
@@ -121,4 +120,11 @@ When("user clears {string}", async function (element) {
   const elementLocator = this.locator.getLocator(this.page, element);
   await expect(elementLocator).toBeVisible({ timeout: 15000 });
   await elementLocator.fill("");
+});
+
+When('user uploads image {string} to {string}', async function (filename, element) {
+  const filePath = path.resolve(__dirname, '../uploads/', filename); 
+
+  const locator = this.locator.getLocator(this.page, element);
+  await locator.setInputFiles(filePath);
 });

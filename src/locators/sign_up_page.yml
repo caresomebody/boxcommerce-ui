@@ -59,9 +59,4 @@ loader_message: "//div[contains(@class,'loader-copy') and contains(normalize-spa
 loader_tip: "//div[contains(@class,'loader-tip') and normalize-space()='- Your friends at BoxCommerce']"
 loader_spinner: "//div[contains(@class,'spinner-container')]//bc-progress-spinner"
 
-## Welcome to BoxCommerce Website Wizard
-wizard_intro_title: "//div[contains(@class,'title') and normalize-space()='Welcome to the BoxCommerce website wizard']"
-wizard_intro_description: "//div[contains(@class,'description') and contains(normalize-space(),'Follow these 3 simple steps')]"
-wizard_start_button: "//button[contains(@class,'bc-primary')]//span[normalize-space()='Start']"
-wizard_intro_image: "//img[@alt='Wizard image' and contains(@src,'onboarding-intro.svg')]"
 

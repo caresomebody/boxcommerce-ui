@@ -1,0 +1,176 @@
+## Welcome to BoxCommerce Website Wizard
+wizard_intro_title: "//div[contains(@class,'title') and normalize-space()='Welcome to the BoxCommerce website wizard']"
+wizard_intro_description: "//div[contains(@class,'description') and contains(normalize-space(),'Follow these 3 simple steps')]"
+wizard_start_button: "//button[contains(@class,'bc-primary')]//span[normalize-space()='Start']"
+wizard_intro_image: "//img[@alt='Wizard image' and contains(@src,'onboarding-intro.svg')]"
+
+wizard_step1_label: "//div[contains(@class,'label') and normalize-space()='Start building your store']"
+wizard_step1_tooltip: "//div[contains(@class,'tooltip') and normalize-space()='Enter your store name and add your social media links to your store.']"
+
+wizard_step2_label: "//div[contains(@class,'label') and normalize-space()='Delivery details']"
+wizard_step2_tooltip: "//div[contains(@class,'tooltip') and normalize-space()='Set up your collection point for delivery partners to collect your products.']"
+
+wizard_exit_button: "//div[contains(@class,'exit-button')]//mat-icon[normalize-space()='close']"
+
+wizard_header_logo: "//div[contains(@class,'logo-holder')]//img[@alt='Logo']"
+
+wizard_helping_hand_title: "//div[contains(@class,'helping-hand')]//strong[normalize-space()='Need a helping hand?']"
+wizard_helping_hand_link: "//div[contains(@class,'helping-hand')]//a[normalize-space()='Click here']"
+
+## Step 1
+wizard_active_step1: "//div[contains(@class,'step') and contains(@class,'active')]//div[@class='index' and normalize-space()='1']"
+wizard_section_header: "//div[normalize-space()='Start building your store']"
+wizard_section_tip: "//div[normalize-space()='Tell us a bit about your business so we can get you up and running. To help you get started we’ll give you a free sub domain.']"
+
+### Store name
+wizard_store_name_label: "//div[normalize-space()='Store name*']"
+wizard_store_name_description: "//div[normalize-space()='This is the name we will display for your online store.']"
+wizard_store_name_input: "//input[@formcontrolname='name']"
+
+### Store URL
+wizard_store_url_label: "//div[normalize-space()='Store website address (URL)*']"
+wizard_store_url_description: "//div[normalize-space()='You can change your free domain name later.']"
+wizard_store_url_input: "//input[@formcontrolname='url']"
+wizard_store_url_suffix: "//div[contains(@class,'domain-ext') and normalize-space()='.boxcommerce.store']"
+wizard_store_url_available: "//div[contains(@class,'available-indicator')]//div[normalize-space()='Available']"
+
+## Store Description
+wizard_about_label: "//div[normalize-space()='Store description*']"
+wizard_about_desc: "//div[normalize-space()='Tell customers what you sell.']"
+wizard_about_editor_root: "//bc-wysiwyg-control[@formcontrolname='content']"
+wizard_about_editor_editable: "//bc-wysiwyg-control[@formcontrolname='content']//div[contains(@class,'fr-element') and @contenteditable='true']"
+wizard_about_editor_placeholder: "//bc-wysiwyg-control[@formcontrolname='content']//span[contains(@class,'fr-placeholder') and normalize-space()='Type something']"
+wizard_about_toolbar_bold: "//bc-wysiwyg-control[@formcontrolname='content']//button[@data-cmd='bold']"
+wizard_about_toolbar_italic: "//bc-wysiwyg-control[@formcontrolname='content']//button[@data-cmd='italic']"
+wizard_about_toolbar_underline: "//bc-wysiwyg-control[@formcontrolname='content']//button[@data-cmd='underline']"
+wizard_about_toolbar_ol: "//bc-wysiwyg-control[@formcontrolname='content']//button[@data-cmd='formatOL']"
+wizard_about_toolbar_ul: "//bc-wysiwyg-control[@formcontrolname='content']//button[@data-cmd='formatUL']"
+wizard_about_toolbar_link: "//bc-wysiwyg-control[@formcontrolname='content']//button[@data-cmd='insertLink']"
+wizard_about_toolbar_clear: "//bc-wysiwyg-control[@formcontrolname='content']//button[@data-cmd='clearFormatting']"
+
+### Upload Logo
+wizard_logo_label: "//div[contains(@class,'label') and normalize-space()='Upload your logo (optional)']"
+wizard_logo_description: "//div[contains(@class,'description') and normalize-space()='This is the logo we will display for your online store.']"
+wizard_logo_upload_zone: "//bc-image-upload-zone[@formcontrolname='logo']"
+wizard_logo_upload_message: "//bc-image-upload-zone[@formcontrolname='logo']//div[contains(@class,'upload-message')]"
+wizard_logo_upload_browse: "//bc-image-upload-zone[@formcontrolname='logo']//span[contains(@class,'browse-link') and normalize-space()='browse']"
+wizard_logo_upload_tip: "//bc-image-upload-zone[@formcontrolname='logo']//div[contains(@class,'dimensions-tip') and contains(normalize-space(),'300 x 300')]"
+wizard_logo_file_input: "//bc-image-upload-zone[@formcontrolname='logo']//input[@type='file']"
+
+crop_image_title: "//div[contains(@class,'dialog-title')]//div[normalize-space()='Crop image']"
+crop_image_close: "//div[contains(@class,'close-button')]//mat-icon[normalize-space()='close']"
+crop_image_rotate_left: "//button[.//span[normalize-space()='Rotate left']]"
+crop_image_rotate_right: "//button[.//span[normalize-space()='Rotate right']]"
+crop_image_zoom_in: "//button[.//span[normalize-space()='Zoom in']]"
+crop_image_zoom_out: "//button[.//span[normalize-space()='Zoom out']]"
+crop_image_source: "//image-cropper//img[contains(@class,'ngx-ic-source-image')]"
+crop_image_message: "//bc-image-cropper//div[contains(@class,'message') and contains(normalize-space(),'Crop your image')]"
+crop_image_cancel: "//div[contains(@class,'dialog-actions')]//button[normalize-space()='Cancel']"
+crop_image_save: "//div[contains(@class,'dialog-actions')]//button[normalize-space()='Save']"
+
+
+# Social Media
+social_links_label: "//div[normalize-space()='Add social media links below']"
+social_links_desc: "//div[normalize-space()='Add social media links for customers to reach you via social media.']"
+social_facebook_field: "//bc-form-field[.//img[@alt='facebookimage'] and .//span[normalize-space()='facebook.com/']]"
+social_facebook_prefix: "//bc-form-field[.//img[@alt='facebookimage']]//span[contains(@class,'link-prefix') and normalize-space()='facebook.com/']"
+social_facebook_input: "//bc-form-field[.//img[@alt='facebookimage']]//input[@placeholder='username']"
+social_instagram_field: "//bc-form-field[.//img[@alt='instagramimage'] and .//span[normalize-space()='instagram.com/']]"
+social_instagram_prefix: "//bc-form-field[.//img[@alt='instagramimage']]//span[contains(@class,'link-prefix') and normalize-space()='instagram.com/']"
+social_instagram_input: "//bc-form-field[.//img[@alt='instagramimage']]//input[@placeholder='username']"
+social_whatsapp_field: "//bc-form-field[.//img[@alt='whatsappimage'] and .//span[normalize-space()='WhatsApp']]"
+social_whatsapp_tel_input: "//input[@type='tel' and @placeholder='Enter Number']"
+
+
+### Error Message
+wizard_error_name_required: "//div[text()='The name field is required.']"
+wizard_error_url_required: "//div[text()='The url field is required.']"
+wizard_error_content_required: "//div[text()='The content field is required.']"
+whatsapp_error_invalid: "//div[text()='Invalid number, please check and re-enter.']"
+
+# Step Button
+wizard_prev_step: "//button[.//span[normalize-space()='Previous step']]"
+wizard_next_step: "//button[@type='submit' and .//span[normalize-space()='Next step']]"
+wizard_next_step_disabled: "//button[@type='submit' and contains(@class,'disabled')]"
+wizard_next_step_enabled:  "//button[@type='submit' and not(contains(@class,'disabled'))]"
+
+## Step 2
+wizard_active_step2: "//div[contains(@class,'step') and contains(@class,'active')]//div[@class='index' and normalize-space()='2']"
+
+delivery_address_header: "//div[normalize-space()='Tell our delivery drivers where to collect your products']"
+delivery_address_description: "//p[contains(normalize-space(),'We provide both local and international delivery')]"
+delivery_address_map: "//div[@role='region' and @aria-roledescription='map']"
+delivery_address_find_label: "//div[normalize-space()='Find address']"
+delivery_address_find_desc: "//div[contains(text(),'Search or place the pin')]"
+delivery_address_search_input: "//input[@placeholder='Search for address' and contains(@class,'address-input')]"
+address_option_living_world: "//mat-option[contains(@class,'address-option')]//span[@class='title' and normalize-space()='Living World Kota Wisata']"
+
+# Building name
+address_building_label: "//div[normalize-space()='Building name']"
+address_building_desc: "//div[normalize-space()='Name of the building where store is located.']"
+address_building_input: "//input[@formcontrolname='placeName']"
+
+# Address line 1
+address_line1_label: "//div[normalize-space()='Address line 1*']"
+address_line1_desc: "//div[normalize-space()='This is the first line of your address.']"
+address_line1_input: "//input[@formcontrolname='addressLine1']"
+
+# Address line 2
+address_line2_label: "//div[normalize-space()='Address line 2']"
+address_line2_desc: "//div[normalize-space()='This is the second line of your address.']"
+address_line2_input: "//input[@formcontrolname='addressLine2']"
+
+# Suburb
+address_suburb_label: "//div[normalize-space()='Suburb*']"
+address_suburb_desc: "//div[normalize-space()='Select the suburb where store is located.']"
+address_suburb_input: "//input[@formcontrolname='suburb']"
+
+# City
+address_city_label: "//div[normalize-space()='City']"
+address_city_desc: "//div[normalize-space()='Select the city where store is located.']"
+address_city_input: "//input[@formcontrolname='city']"
+
+# Province/State
+address_province_label: "//div[normalize-space()='Province/State']"
+address_province_desc: "//div[normalize-space()='Select the province/state where store is located.']"
+address_province_input: "//input[@formcontrolname='province']"
+
+# Postal code
+address_postal_label: "//div[normalize-space()='Postal code*']"
+address_postal_desc: "//div[normalize-space()='Postal code of the area where store is located.']"
+address_postal_input: "//input[@formcontrolname='postalCode']"
+
+# Country
+address_country_label: "//div[normalize-space()='Country*']"
+address_country_desc: "//div[normalize-space()='Select the Country where store is located.']"
+address_country_input: "//bc-form-field[.//div[normalize-space()='Country*']]//input[@disabled]"
+
+# Latitude
+address_latitude_label: "//div[normalize-space()='Latitude*']"
+address_latitude_desc: "//div[normalize-space()='The latitudinal coordinates of your location on google maps.']"
+address_latitude_input: "//input[@formcontrolname='latitude']"
+
+# Longitude
+address_longitude_label: "//div[normalize-space()='Longitude*']"
+address_longitude_desc: "//div[normalize-space()='The longitudinal coordinates of your location on google maps.']"
+address_longitude_input: "//input[@formcontrolname='longitude']"
+
+
+## Quick Guide
+tour_list_item_quick_guide_label: "//div[text()='Quick guide']"
+tour_list_item_quick_guide_tick:  "//div[.//div[text()='Quick guide']]//mat-icon[@data-mat-icon-name='tick']"
+tour_footer_title: "//div[normalize-space()='Take a tour']"
+tour_next_button: "//button[.//span[normalize-space()='Next'] and .//mat-icon[normalize-space()='chevron_right']]"
+
+tour_slide_1: "//img[@alt='Onboarding tour slide' and contains(@src,'tour-slide-1.png')]"
+tour_slide_2: "//img[@alt='Onboarding tour slide' and contains(@src,'tour-slide-2.png')]"
+tour_slide_3: "//img[@alt='Onboarding tour slide' and contains(@src,'tour-slide-3.png')]"
+
+## Onboarding Done
+onboarding_done_image: "//img[@alt='Wizard done image' and contains(@src,'onboarding-done.svg')]"
+onboarding_done_title: "//div[normalize-space()='Great! We’ve built your store.']"
+onboarding_done_description: "//div[contains(text(),'You’ve successfully completed your onboarding')]"
+onboarding_done_button: "//button[.//span[normalize-space()=\"Ok, let's go!\"]]"
+
+## Dashboard
+dashboard_header_title: "//h2[normalize-space()='Your dashboard']"
